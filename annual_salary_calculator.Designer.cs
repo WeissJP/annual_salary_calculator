@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lblHoursPerWeek = new System.Windows.Forms.Label();
-            this.txtEnterHours = new System.Windows.Forms.TextBox();
             this.btnCalcSalary = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -40,7 +39,9 @@
             this.rdbPartTime = new System.Windows.Forms.RadioButton();
             this.rdbFullTime = new System.Windows.Forms.RadioButton();
             this.txtEnterRate = new System.Windows.Forms.TextBox();
+            this.numUpDwnHours = new System.Windows.Forms.NumericUpDown();
             this.grpEmplyType.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDwnHours)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -62,13 +63,6 @@
             this.lblHoursPerWeek.Size = new System.Drawing.Size(212, 16);
             this.lblHoursPerWeek.TabIndex = 2;
             this.lblHoursPerWeek.Text = "Enter the hours you work per week:";
-            // 
-            // txtEnterHours
-            // 
-            this.txtEnterHours.Location = new System.Drawing.Point(247, 135);
-            this.txtEnterHours.Name = "txtEnterHours";
-            this.txtEnterHours.Size = new System.Drawing.Size(77, 20);
-            this.txtEnterHours.TabIndex = 3;
             // 
             // btnCalcSalary
             // 
@@ -161,19 +155,45 @@
             this.txtEnterRate.Name = "txtEnterRate";
             this.txtEnterRate.Size = new System.Drawing.Size(77, 20);
             this.txtEnterRate.TabIndex = 2;
+            this.txtEnterRate.Enter += new System.EventHandler(this.txtEnterRate_TextHighlight);
+            this.txtEnterRate.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEnterRate_TextHighlight);
+            // 
+            // numUpDwnHours
+            // 
+            this.numUpDwnHours.Location = new System.Drawing.Point(247, 136);
+            this.numUpDwnHours.Maximum = new decimal(new int[] {
+            39,
+            0,
+            0,
+            0});
+            this.numUpDwnHours.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numUpDwnHours.Name = "numUpDwnHours";
+            this.numUpDwnHours.Size = new System.Drawing.Size(77, 20);
+            this.numUpDwnHours.TabIndex = 3;
+            this.numUpDwnHours.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numUpDwnHours.Enter += new System.EventHandler(this.numUpDwnHours_TextHighlight);
+            this.numUpDwnHours.MouseClick += new System.Windows.Forms.MouseEventHandler(this.numUpDwnHours_TextHighlight);
             // 
             // annual_salary_calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 335);
+            this.Controls.Add(this.numUpDwnHours);
             this.Controls.Add(this.txtEnterRate);
             this.Controls.Add(this.grpEmplyType);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.txtEnterHours);
             this.Controls.Add(this.lblHoursPerWeek);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCalcSalary);
@@ -182,6 +202,7 @@
             this.Load += new System.EventHandler(this.annual_salary_calculator_Load);
             this.grpEmplyType.ResumeLayout(false);
             this.grpEmplyType.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDwnHours)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,7 +211,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblHoursPerWeek;
-        private System.Windows.Forms.TextBox txtEnterHours;
         private System.Windows.Forms.Button btnCalcSalary;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnClear;
@@ -200,6 +220,7 @@
         private System.Windows.Forms.RadioButton rdbFullTime;
         private System.Windows.Forms.RadioButton rdbPartTime;
         private System.Windows.Forms.TextBox txtEnterRate;
+        private System.Windows.Forms.NumericUpDown numUpDwnHours;
     }
 }
 
