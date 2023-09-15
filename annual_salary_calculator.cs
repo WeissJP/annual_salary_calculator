@@ -23,6 +23,8 @@ namespace annual_salary_calculator
             rdbFullTime.Checked = true;
             lblHoursPerWeek.Enabled = false;
             numUpDwnHours.Enabled = false;
+            this.MinimumSize = new Size(400, 350);
+            this.MaximumSize = new Size(400, 350);
         }
 
         private void btnCalcSalary_Click(object sender, EventArgs e)

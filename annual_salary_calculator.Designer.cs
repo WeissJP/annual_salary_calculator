@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(annual_salary_calculator));
             this.label1 = new System.Windows.Forms.Label();
             this.lblHoursPerWeek = new System.Windows.Forms.Label();
             this.btnCalcSalary = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 105);
+            this.label1.Location = new System.Drawing.Point(85, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 16);
             this.label1.TabIndex = 1;
@@ -58,7 +59,7 @@
             // 
             this.lblHoursPerWeek.AutoSize = true;
             this.lblHoursPerWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoursPerWeek.Location = new System.Drawing.Point(29, 136);
+            this.lblHoursPerWeek.Location = new System.Drawing.Point(34, 136);
             this.lblHoursPerWeek.Name = "lblHoursPerWeek";
             this.lblHoursPerWeek.Size = new System.Drawing.Size(212, 16);
             this.lblHoursPerWeek.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // btnCalcSalary
             // 
-            this.btnCalcSalary.Location = new System.Drawing.Point(31, 174);
+            this.btnCalcSalary.Location = new System.Drawing.Point(36, 174);
             this.btnCalcSalary.Name = "btnCalcSalary";
             this.btnCalcSalary.Size = new System.Drawing.Size(102, 32);
             this.btnCalcSalary.TabIndex = 4;
@@ -76,7 +77,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(247, 174);
+            this.btnExit.Location = new System.Drawing.Point(252, 174);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(102, 32);
             this.btnExit.TabIndex = 6;
@@ -86,7 +87,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(139, 174);
+            this.btnClear.Location = new System.Drawing.Point(144, 174);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(102, 32);
             this.btnClear.TabIndex = 5;
@@ -98,7 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 255);
+            this.label3.Location = new System.Drawing.Point(44, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(202, 20);
             this.label3.TabIndex = 7;
@@ -109,7 +110,7 @@
             this.lblResult.AutoSize = true;
             this.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(247, 255);
+            this.lblResult.Location = new System.Drawing.Point(252, 255);
             this.lblResult.MinimumSize = new System.Drawing.Size(100, 2);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(100, 22);
@@ -119,7 +120,7 @@
             // 
             this.grpEmplyType.Controls.Add(this.rdbPartTime);
             this.grpEmplyType.Controls.Add(this.rdbFullTime);
-            this.grpEmplyType.Location = new System.Drawing.Point(167, 30);
+            this.grpEmplyType.Location = new System.Drawing.Point(121, 31);
             this.grpEmplyType.Name = "grpEmplyType";
             this.grpEmplyType.Size = new System.Drawing.Size(157, 48);
             this.grpEmplyType.TabIndex = 9;
@@ -151,16 +152,16 @@
             // 
             // txtEnterRate
             // 
-            this.txtEnterRate.Location = new System.Drawing.Point(247, 104);
+            this.txtEnterRate.Location = new System.Drawing.Point(252, 104);
             this.txtEnterRate.Name = "txtEnterRate";
             this.txtEnterRate.Size = new System.Drawing.Size(77, 20);
             this.txtEnterRate.TabIndex = 2;
-            this.txtEnterRate.Enter += new System.EventHandler(this.txtEnterRate_TextHighlight);
             this.txtEnterRate.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEnterRate_TextHighlight);
+            this.txtEnterRate.Enter += new System.EventHandler(this.txtEnterRate_TextHighlight);
             // 
             // numUpDwnHours
             // 
-            this.numUpDwnHours.Location = new System.Drawing.Point(247, 136);
+            this.numUpDwnHours.Location = new System.Drawing.Point(252, 136);
             this.numUpDwnHours.Maximum = new decimal(new int[] {
             39,
             0,
@@ -186,7 +187,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 335);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(384, 311);
             this.Controls.Add(this.numUpDwnHours);
             this.Controls.Add(this.txtEnterRate);
             this.Controls.Add(this.grpEmplyType);
@@ -197,7 +199,10 @@
             this.Controls.Add(this.lblHoursPerWeek);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCalcSalary);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "annual_salary_calculator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Annual Gross Salary Calculator";
             this.Load += new System.EventHandler(this.annual_salary_calculator_Load);
             this.grpEmplyType.ResumeLayout(false);
